@@ -1,0 +1,39 @@
+body{
+    background-image: url("resbg.jpg");
+}
+#nav{
+    background-color: rgba(63, 61, 61, 0.7);
+    text-align: center;
+}
+a {
+    display: block;
+    padding: 8px;
+    background-color: #dddddd;
+    color: whitesmoke;
+    
+  }
+  li a:hover {
+    background-color: rgba(210, 205, 205, 0.1);
+  }
+  #i{
+    color: white;
+    font-size: 20px;
+  }
+.overlay {
+    
+    background: rgba(93, 91, 91, 0.3);
+    height: 800px;
+    margin: 50px 50px 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  #name{
+    color: aliceblue;
+    font-size: 80px;
+  }
+  
+  #sub{
+    color: aliceblue;
+    font-size: 20px;
+  }

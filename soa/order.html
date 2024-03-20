@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="order.css">
+        <script>
+            function placeOrder() {
+                const name = document.getElementById('name').value;
+                const contact = document.getElementById('contact').value;
+                const dish = document.getElementById('dish').value;
+                const address = document.getElementById('address').value;
+                const pay = document.getElementById('pay').value;
+
+                let cost;
+                switch (dish) {
+                    case 'Briyani':
+                        cost = 200;
+                        break;
+                    case 'Delicacy':
+                        cost = 300;
+                        break;
+                    case 'Drink':
+                        cost = 100;
+                        break;
+                    default:
+                        alert('Invalid dish selected');
+                        return;
+                }
+
+                const bill = `Order Successful! Thank you ${name} for placing the order.
+                Name: ${name}
+                Contact: ${contact}
+                Dish: ${dish}
+                Address: ${address}
+                Payment mode: ${pay}
+                Total Cost: ${cost}`;
+
+                // alert(bill);
+                document.getElementById('orderConfirmation').style.display='block';
+                document.getElementById('orderDetails').innerHTML=bill;
+            }
+        </script>
+    </head>
+    <body>
+        <div class="overlay">
+            <form onsubmit="event.preventDefault(); placeOrder();">
+                Name : <input type="text" id="name" placeholder="Name" required><br>
+                Contact : <input type="tel" id="contact" placeholder="Contact Number" required><br>
+                Dish :
+                <select name="dish" id="dish">
+                    <option>Briyani</option>
+                    <option>Delicacy</option>
+                    <option>Drink</option>
+                </select><br>
+                Address : <input type="text" id="address" placeholder="Address" required><br>
+                Payment mode :
+                <select name="pay" id="pay">
+                    <option>Cash On Delivery</option>
+                    <option>Net Banking</option>
+                    <option>Wallet</option>
+                </select><br>
+                <Button type="submit" id="placeorder">Place Order</Button><br>
+
+            </form>
+        </div>
+        <div id="orderConfirmation" style="display: none;">
+            <p>Order Confirmation:</p>
+            <p id="orderDetails"></p>
+          </div>
+        <!-- <script src="order.js" async defer></script> -->
+        
+    </body>
+</html>

@@ -1,0 +1,54 @@
+body{
+    background-image: url("order3.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.overlay {
+    
+    background: rgba(88, 88, 129, 0.205);
+    height: 800px;
+    margin: 50px 50px 50px 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(37, 34, 28);
+    font-family: cursive;
+    font-size: 30px;
+  }
+  input, select{
+    border: none;
+    border-radius: 4px;
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+  }
+  button {
+    background-color: #d19c08; /* Green */
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+  }
+  #orderConfirmation {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+    font-family: Arial, sans-serif;
+    z-index: 1000; /* Ensure it's on top */
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Add shadow */
+    transition: top 0.3s ease-in-out; /* Smooth transition */
+}
+
+#orderConfirmation.hide {
+    top: -100px; /* Hide it above the screen */
+}
